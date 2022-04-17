@@ -1,16 +1,9 @@
 import express from 'express';
+import routes from './routes';
 
 const app = express();
 
-function getUsername(){
-    return 'diego3g';
-}
+app.use(routes);
 
-const username = getUsername();
-
-app.get('/',(req, res) => {
-    return res.send("Hello World");
-
-})
 
 
